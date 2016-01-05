@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
  
+  get 'cities/index'
+
+  get 'cities/show'
+
+  get 'cities/new'
+
+  get 'cities/create'
+
   root 'welcome#index'
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
