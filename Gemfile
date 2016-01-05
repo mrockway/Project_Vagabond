@@ -48,5 +48,6 @@ group :development do
 
 end
 
+gem 'paperclip', '~> 4.3', '>= 4.3.2'
 
 
