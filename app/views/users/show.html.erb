@@ -5,8 +5,7 @@
 
 <%= image_tag current_user.image.url(:thumb) %>
 
-<p><%= current_user.first_name %>'s posts</p>
-<hr>
+<h3><%= current_user.first_name %>'s posts</h3>
 <% current_user.posts.each do |post| %>
-<%= post.title %>
+	<%= link_to post.title, post_path(post) %>
 <% end %>

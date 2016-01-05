@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_filter :set_post, except: [:index, :new, :create]
+
   def new
   end
 
@@ -9,6 +11,7 @@ class PostsController < ApplicationController
   end
 
   def show
+
   end
 
   def edit
@@ -18,6 +21,13 @@ class PostsController < ApplicationController
   end
   
   def destroy
+  end
+
+  private
+
+  def set_post
+    post_id = params[:id]
+    @post = Post.find_by_id(post_id)
   end
 
 end
