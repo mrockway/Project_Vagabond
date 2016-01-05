@@ -1,5 +1,5 @@
 <div class="input-group">
-<%= form_for @user do |user| %>
+<%= form_for @user, html: { multipart: true } do |user| %>
 <div class="input-group">
 <%= user.label :email %>
 <%= user.email_field :email, class: "form-control", autofocus: true, placeholder: "Your Email" %>
@@ -26,6 +26,10 @@
 </div>
 <div class="input-group">
 <%= user.submit "Submit", class: "form-control" %>
+</div>
+<div class="field">
+	<%= user.label :image %>
+	<%= user.file_field :image %>
 </div>
 <% end %>
 </div>
