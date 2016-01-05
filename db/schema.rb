@@ -22,7 +22,10 @@ ActiveRecord::Schema.define(version: 20160105055658) do
     t.string   "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
+
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
@@ -38,4 +41,5 @@ ActiveRecord::Schema.define(version: 20160105055658) do
     t.datetime "image_updated_at"
   end
 
+  add_foreign_key "posts", "users"
 end
