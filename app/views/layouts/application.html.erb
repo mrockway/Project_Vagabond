@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>ProjectVagabond</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-<%= javascript_include_tag 'application' %>
-</body>
+	<head>
+		<title>ProjectVagabond</title>
+		<%= stylesheet_link_tag 'application', media: 'all' %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div class="row">
+			<% flash.each do |alert, message| %>
+			<div class="flash-<%= alert %>">
+				<p><%= message %></p>
+			</div>
+			<% end %>
+		</div>
+		<%= yield %>
+		<%= javascript_include_tag 'application' %>
+	</body>
 </html>

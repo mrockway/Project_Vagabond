@@ -1,0 +1,31 @@
+<div class="input-group">
+<%= form_for @user do |user| %>
+<div class="input-group">
+<%= user.label :email %>
+<%= user.email_field :email, class: "form-control", autofocus: true, placeholder: "Your Email" %>
+</div>
+<div class="input-group">
+<%= user.label :first_name %>
+<%= user.text_field :first_name, class: "form-control", placeholder: "First Name" %>
+</div>
+<div class="input-group">
+<%= user.label :last_name %>
+<%= user.text_field :last_name, class: "form-control", placeholder: "Last Name" %>
+</div>
+<div class="input-group">
+<%= user.label :current_city %>
+<%= user.text_field :current_city, class: "form-control", placeholder: "Current City" %>
+</div>
+<div class="input-group">
+<%= user.label :password %>
+<%= user.password_field :password, class: "form-control", placeholder: "Password" %>
+</div>
+<div class="input-group">
+<%= user.label :password_confirmation %>
+<%= user.password_field :password_confirmation, class: "form-control", placeholder: "Confirm Password" %>
+</div>
+<div class="input-group">
+<%= user.submit "Submit", class: "form-control" %>
+</div>
+<% end %>
+</div>
