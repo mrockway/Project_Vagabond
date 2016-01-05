@@ -6,8 +6,8 @@
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
-	<nav class="navbar navbar-inverse">
- <div class="container-fluid”>
+	<nav class="navBar">
+ <!-- <div class="container-fluid”> -->
 		<div class="navBar">
 			<ul class="nav nav-pills">
 				<li role="presentation" class="active"><%= link_to "Home", root_path %></li>
@@ -20,8 +20,9 @@
 				<% end %>
 			</ul>
 		</div>	
-		</div>
+		<!-- </div> -->
 		</nav>
+		<div class="container">
 		<div class="row">
 			<% flash.each do |alert, message| %>
 			<div class="flash-<%= alert %>">
@@ -29,10 +30,12 @@
 			</div>
 			<% end %>
 		</div>
-		<div class="row">
-		<div class="col-md-6 col-offset-3">
-			<%= yield %>
+			
 		</div>
+		<div class="content">
+		
+			<%= yield %>
+		
 		</div>
 		<%= javascript_include_tag 'application' %>
 	</body>

@@ -1,4 +1,6 @@
-
+<div class="container">
+<div class="row">
+	<div class="col-md-6 col-offset-3">
 <h1>Welcome <%= current_user.first_name %> from <%= current_user.current_city %>!</h1>
 <p>Member since <%= current_user.created_at.strftime("%B %d, %Y") %></p>
 <hr>
@@ -9,3 +11,7 @@
 <% current_user.posts.each do |post| %>
 	<%= link_to post.title, post_path(post) %>
 <% end %>
+</div>
+</div>
+	
+</div>
