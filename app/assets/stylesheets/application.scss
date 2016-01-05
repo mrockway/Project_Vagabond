@@ -3,6 +3,10 @@
 @import "bootstrap";
 @import "welcome";
 
+body { 
+	padding-top: 70px; 
+}
+
 .navBar {
 	background-color: rgba(119, 117, 117, 0.3);
 	font-size: 20px;
