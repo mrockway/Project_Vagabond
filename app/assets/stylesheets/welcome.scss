@@ -1,3 +1,24 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.splash-page {
+
+	background-image: url("https://c2.staticflickr.com/4/3679/11232337864_2245f899eb_b.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	h1 {
+		color: #FFFFFF;
+		font-size: 70px;
+		margin-top: 10%;
+		-webkit-text-stroke: 1px #000000;
+	}
+
+	h2 {
+		color: #FFFFFF;
+		font-size: 40px;
+		-webkit-text-stroke: 1px #000000;
+	}
+
+}
