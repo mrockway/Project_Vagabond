@@ -12,5 +12,20 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
+
+$(function() {
+	
+	function resizeSplashImage() {
+		
+		var imageHeight = window.innerHeight;
+		$('.splash-page').css('height', imageHeight);
+	}
+
+	$(window).resize( function() {
+		resizeSplashImage();
+	});
+
+	resizeSplashImage();
+
+});
