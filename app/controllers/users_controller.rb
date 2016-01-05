@@ -8,7 +8,7 @@ class UsersController < ApplicationController
       # when new user created, hard-coded post is automatically added to profile page
       first_post = Post.new( {
         :user => @user,
-        :author => @user.first_name + @user.last_name,
+        :author => @user.first_name + " " + @user.last_name,
         :title => "Generic post title",
         :content => "Post content" } )
       
