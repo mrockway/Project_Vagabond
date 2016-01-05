@@ -3,6 +3,7 @@
 <p>Member since <%= current_user.created_at.strftime("%B %d, %Y") %></p>
 <hr>
 
+<%= image_tag current_user.image.url(:thumb) %>
 
 <h3><%= current_user.first_name %>'s posts</h3>
 <% current_user.posts.each do |post| %>
