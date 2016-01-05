@@ -1,1 +1,10 @@
 <h1>Login Page</h1>
+
+<%= form_for :user, url:"/sessions",method: :post do |session| %>
+<%= session.label :email %>
+	<%= session.email_field :email, autofocus: true %>
+<%= session.label :password %>
+	<%= session.password_field :password %>
+	<%= session.submit "Submit" %>
+
+<% end %>

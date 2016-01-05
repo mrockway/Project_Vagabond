@@ -6,6 +6,12 @@
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
+		<ul class="nav nav-pills">
+			<li role="presentation" class="active"><a href="#">Home</a></li>
+			<li role="presentation"><%= link_to "Log In", login_path %></li>
+			<li role="presentation"><%= link_to "Logout", logout_path %></li>
+		</ul>
+		
 		<div class="row">
 			<% flash.each do |alert, message| %>
 			<div class="flash-<%= alert %>">
