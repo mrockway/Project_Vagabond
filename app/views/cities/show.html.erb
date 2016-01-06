@@ -2,31 +2,59 @@
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="city-content">
-				<h1 class="text-center page-header"><%= @city.name %></h1>	
+				<h1 class="text-center page-header"><%= @city.name %></h1>
 				<h4><%= @city.description %></h4>	
 			</div>
 		</div>
 	</div>
-	<div class="row">
-		<% @posts.each do |post| %>
-		<% if post.city_id == @city.id %>
+</div>
+<div class="city-posts">
+	<div class="mini-nav text-center">
+		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
+				<p class="text-center">
+					<%= link_to "Add A New Post", new_post_path, class: "text-center" %>
+				</p>
+				<p class="pull-right">
+					<%= link_to "See All Cities", cities_path %>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<p>See post content related to: 
+				<span>
+					<% @posts.map(&:tags).uniq.each do |tag| %>
+						<%= link_to "#{tag}", city_path(@city), class: "post-tags" %>
+					<% end %>
+				</span>
+			</p>
+		</div>
+	</div>
+	<% @posts.each do |post| %>
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<% if post.city_id == @city.id %>
 				<h1 class="text-center page-header"><%= post.tags %></h1>
 				<% @users.each do |user| %>
 					<% if user.id == post.user_id %>
 						<% if post.tags == "Sports" %>	
-							<h3><%= post.title %></h3>
+							<a name="#{post.tags}"></a>
+							<h3><%= link_to "#{post.title}", post_path(post.id) %></h3>
 							<h3>Written by <%= user.first_name %> <%= user.last_name %></h3>
 							<p>Written <%= time_ago_in_words(post.created_at) %> ago</p>
 							<p><%= post.content %></p>
 						<% end %>
-						<% if post.tags == "Dining" %>	
+						<% if post.tags == "Dining" %>
+							<a name="#{post.tags}"></a>	
 							<h3><%= post.title %></h3>
 							<h3>Written by <%= user.first_name %> <%= user.last_name %></h3>
 							<p>Written <%= time_ago_in_words(post.created_at) %> ago</p>
 							<p><%= post.content %></p>
 						<% end %>
 						<% if post.tags == "Entertainment" %>	
+							<a name="#{post.tags}"></a>
 							<h3><%= post.title %></h3>
 							<h3>Written by <%= user.first_name %> <%= user.last_name %></h3>
 							<p>Written <%= time_ago_in_words(post.created_at) %> ago</p>
@@ -34,9 +62,9 @@
 						<% end %>
 					<% end %> <!-- close if user = post -->
 				<% end %> <!-- close @users each -->
-			</div>		
-		<% end %> <!-- close if @posts = @city -->
-		<% end %> <!-- close @posts each -->
-	</div>
+			<% end %> <!-- close if @posts = @city -->
+		</div>
+	</div>		
+<% end %> <!-- close @posts each -->
 </div>
 

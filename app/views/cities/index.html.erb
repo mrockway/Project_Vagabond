@@ -1,15 +1,13 @@
 <div class="content">
 	<div class="row">
-		<div class="thumbnail">
-		<% City.all.collect do |city| %>
-			<%= link_to city_path(city) do %>
-			<div class="col-md-4 <%= city.name.downcase.gsub(/\s+/, "") %>-image">
-				<h3><%= city.name %></h3>
-				<img src="<%= city.name.gsub(/\s+/, "").downcase%>.jpg" alt="">
-				<p><%= city.description %></p>
-			</div>
+			<% City.all.collect do |city| %>
+				<div class="col-md-4">
+				<%= link_to city_path(city) do %>
+					<div class="<%= city.name.downcase.gsub(/\s+/, "-") %>-image city-thumbnail">
+						<h3><%= city.name %></h3>
+					</div>
+				<% end %>
+				</div>
 			<% end %>
-			<% end %>
-		</div>
 	</div>
 </div>
