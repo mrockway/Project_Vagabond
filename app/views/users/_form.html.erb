@@ -29,13 +29,14 @@
 						<%= user.password_field :password_confirmation, class: "form-control" %>
 					</div>
 					
-					<div class="input-group">
-					<br>
-						<%= user.submit "Submit", class: "form-control" %>
-					</div>
 					<div class="field">
 						<%= user.label :image %>
 						<%= user.file_field :image %>
+					</div>
+					
+					<div class="input-group">
+					<br>
+						<%= user.submit "Submit", class: "form-control" %>
 					</div>
 					<% end %>
 				</div>
