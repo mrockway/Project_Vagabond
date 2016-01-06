@@ -6,42 +6,42 @@
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
-	<nav class="navbar navbar-inverse">
- <!-- <div class="container-fluid”> -->
-		<div class="navBar navbar-right navbar-custom">
-			<ul class="nav nav-pills">
+		<nav class="navbar navbar-inverse">
+			<!-- <div class="container-fluid”> -->
+			<div class="navBar navbar-right navbar-custom" >
+				<ul class="nav nav-pills">
+					
+					<li role="presentation" class="home"><%= link_to "Home", root_path %></li>
+					
+					<% if current_user %>
+					<li role="presentation"><%= link_to "Profile", user_path(current_user) %></li>
+					<li role="presentation"><%= link_to "Logout", logout_path %></li>
+					<% else %>
+					<li role="presentation"><%= link_to "Sign Up", new_user_path %></li>
+					<li role="presentation"><%= link_to "Login", login_path %></li>
+					<% end %>
+				</ul>
+			</div>
 			
-				<li role="presentation" class="home"><%= link_to "Home", root_path %></li>
-
-				
-				<% if current_user %>
-				<li role="presentation"><%= link_to "Profile", user_path(current_user) %></li>
-				<li role="presentation"><%= link_to "Logout", logout_path %></li>
-				<% else %>
-				<li role="presentation"><%= link_to "Sign Up", new_user_path %></li>
-				<li role="presentation"><%= link_to "Login", login_path %></li>
-				<% end %>
-			</ul>
-		</div>	
-		
-		
-		<!-- </div> -->
+			
+			<!-- </div> -->
 		</nav>
 		<div class="container">
-		<div class="row">
-			<% flash.each do |alert, message| %>
-			<div class="flash-<%= alert %>">
-				<p><%= message %></p>
+			<div class="row">
+				<% flash.each do |alert, message| %>
+				<div class="flash-<%= alert %>">
+					<p><%= message %></p>
+				</div>
+				<% end %>
 			</div>
-			<% end %>
-		</div>
 			
 		</div>
-		<div class="content">
 		
+			
 			<%= yield %>
+
+			
 		
-		</div>
 		<%= javascript_include_tag 'application' %>
 	</body>
 </html>
