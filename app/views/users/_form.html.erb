@@ -1,31 +1,32 @@
 
 
-
+<div class="user">
+<div class="form">
 <div class="input-group">
 <%= form_for @user, html: { multipart: true } do |user| %>
 <div class="input-group">
 <%= user.label :email %>
-<%= user.email_field :email, class: "form-control", autofocus: true, placeholder: "Your Email" %>
+<%= user.email_field :email, class: "form-control", autofocus: true %>
 </div>
 <div class="input-group">
 <%= user.label :first_name %>
-<%= user.text_field :first_name, class: "form-control", placeholder: "First Name" %>
+<%= user.text_field :first_name, class: "form-control" %>
 </div>
 <div class="input-group">
 <%= user.label :last_name %>
-<%= user.text_field :last_name, class: "form-control", placeholder: "Last Name" %>
+<%= user.text_field :last_name, class: "form-control" %>
 </div>
 <div class="input-group">
 <%= user.label :current_city %>
-<%= user.text_field :current_city, class: "form-control", placeholder: "Current City" %>
+<%= user.text_field :current_city, class: "form-control" %>
 </div>
 <div class="input-group">
 <%= user.label :password %>
-<%= user.password_field :password, class: "form-control", placeholder: "Password" %>
+<%= user.password_field :password, class: "form-control" %>
 </div>
 <div class="input-group">
 <%= user.label :password_confirmation %>
-<%= user.password_field :password_confirmation, class: "form-control", placeholder: "Confirm Password" %>
+<%= user.password_field :password_confirmation, class: "form-control" %>
 </div>
 <div class="input-group">
 <%= user.submit "Submit", class: "form-control" %>
@@ -36,3 +37,5 @@
 </div>
 <% end %>
 </div>
+</div>
+
