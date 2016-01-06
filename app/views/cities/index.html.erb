@@ -1,2 +1,15 @@
-<h1>Cities#index</h1>
-<p>Find me in app/views/cities/index.html.erb</p>
+<div class="content">
+	<div class="row">
+		<div class="thumbnail">
+		<% City.all.collect do |city| %>
+			<%= link_to city_path(city) do %>
+			<div class="col-md-4 <%= city.name.downcase.gsub(/\s+/, "") %>-image">
+				<h3><%= city.name %></h3>
+				<img src="<%= city.name.gsub(/\s+/, "").downcase%>.jpg" alt="">
+				<p><%= city.description %></p>
+			</div>
+			<% end %>
+			<% end %>
+		</div>
+	</div>
+</div>

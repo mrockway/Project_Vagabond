@@ -1,15 +1,42 @@
-<div class="large_<%= @city.name %>_image">
-	<h1 class="text-center"><%= @city.name %></h1>	
-</div>
-<div class="container">
+<div class="<%= @city.name.downcase.gsub(/\s+/, "-") %>-image">
 	<div class="row">
-		<div class="col-md-offset-2 col-md-7">
+		<div class="col-md-10 col-md-offset-1">
+			<h1 class="text-center"><%= @city.name %></h1>	
 			<p><%= @city.description %></p>
-		</div>
-		<div class="col-md-3">
-			<ul>
-				<li></li>
-			</ul>
 		</div>
 	</div>
 </div>
+<div class="content">
+	<div class="row">
+		<% @posts.each do |post| %>
+		<% if post.city_id == @city.id %>
+		<div class="col-md-10 col-md-offset-1">
+			<h1 class="text-center page-header"><%= post.tags %></h1>
+				<% @users.each do |user| %>
+					<% if user.id == post.user_id %>
+						<% if post.tags == "Sports" %>	
+							<h3><%= post.title %></h3>
+							<h3>Written by <%= user.first_name %> <%= user.last_name %></h3>
+							<p>Written <%= time_ago_in_words(post.created_at) %> ago</p>
+							<p><%= post.content %></p>
+						<% end %>
+						<% if post.tags == "Dining" %>	
+							<h3><%= post.title %></h3>
+							<h3>Written by <%= user.first_name %> <%= user.last_name %></h3>
+							<p>Written <%= time_ago_in_words(post.created_at) %> ago</p>
+							<p><%= post.content %></p>
+						<% end %>
+						<% if post.tags == "Entertainment" %>	
+							<h3><%= post.title %></h3>
+							<h3>Written by <%= user.first_name %> <%= user.last_name %></h3>
+							<p>Written <%= time_ago_in_words(post.created_at) %> ago</p>
+							<p><%= post.content %></p>
+						<% end %>
+					<% end %> <!-- close if user = post -->
+				<% end %> <!-- close @users each -->
+			<% end %> <!-- close if @posts = @city -->
+		<% end %> <!-- close @posts each -->
+		</div>		
+	</div>
+</div>
+
