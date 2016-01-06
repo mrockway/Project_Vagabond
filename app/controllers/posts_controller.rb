@@ -41,10 +41,10 @@ class PostsController < ApplicationController
 
     if @post.update_attributes(post_params)
       flash[:notice] = "Successfully updated post."
-      redirect_to user_post_path(@user, @post)
+      redirect_to post_path(@post)
     else
       flash[:notice] = @post.errors.full_messages.join(", ")
-      redirect_to edit_user_post_path(@user, @post)
+      redirect_to edit_post_path(@post)
     end
   end
   
@@ -55,7 +55,7 @@ class PostsController < ApplicationController
 
     @post.destroy
     flash[:notice] = "Successfully deleted post."
-    redirect_to user_path(@user)
+    redirect_to user_path(@post.user)
   end
 
   private
