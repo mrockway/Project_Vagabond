@@ -18,7 +18,6 @@
 $(function() {
 	
 	function resizeSplashImage() {
-		
 		var imageHeight = window.innerHeight;
 		$('.splash-page').css('height', imageHeight);
 	}
