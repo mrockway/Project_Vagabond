@@ -6,13 +6,13 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       # when new user created, hard-coded post is automatically added to profile page
-      first_post = Post.new( {
-        :user => @user,
-        :author => @user.first_name + " " + @user.last_name,
-        :title => "Generic post title",
-        :content => "Post content" } )
+      #first_post = Post.new( {
+        #:user => @user,
+        #:author => @user.first_name + " " + @user.last_name,
+        #:title => "Generic post title",
+        #:content => "Post content" } )
       
-      if first_post.save
+      #if first_post.save
         flash[:notice] = "You have successfully created an account"
         session[:user_id] = @user.id
         redirect_to user_path(@user.id)
