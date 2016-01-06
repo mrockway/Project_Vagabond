@@ -1,10 +1,11 @@
 class PostsController < ApplicationController
   before_filter :set_post, except: [:index, :new, :create]
 
-  def new
+  def index
   end
 
-  def index
+  def new
+    @post = Post.new
   end
 
   def create

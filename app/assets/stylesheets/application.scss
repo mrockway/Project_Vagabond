@@ -3,15 +3,36 @@
 @import "bootstrap";
 @import "welcome";
 
+@import url(https://fonts.googleapis.com/css?family=Lato:900);
+
 body { 
-	 
+background-color: #D5B77A;
+font-family: 'Lato', sans-serif;
+
 }
 
-.navBar {
-	background-color: rgba(119, 117, 117, 0.3);
+h1 {
+	color: white;
 	font-size: 20px;
-	/*position: fixed;*/
+}
+
+.container {
+	margin-top: -20px;
+}
+
+.user {
+	color: #EEE9E9;
+}
+
+.input-group {
+	width: 50%;
+}
+
+
+.navbar {
+	opacity: 0.5;
+	font-size: 12px;
+	
 	width: 100%;
 }
-
 
