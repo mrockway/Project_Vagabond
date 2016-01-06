@@ -7,9 +7,9 @@ Rails.application.routes.draw do
 
   resources :posts
 
-  resources :sessions, only: [:create]
   get '/logout', to: "sessions#destroy", as: "logout"
   get '/login', to: "sessions#new", as: "login"
+  resources :sessions, only: [:create]
 
   resources :cities, only: [:new, :create, :index, :show]
   
