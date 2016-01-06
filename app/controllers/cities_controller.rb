@@ -29,8 +29,6 @@ class CitiesController < ApplicationController
 
   def get_users
     @users = User.all
-    @user = @users.each do |user|
-    end
   end
 
 end

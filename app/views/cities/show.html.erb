@@ -12,28 +12,30 @@
 		<% if post.city_id == @city.id %>
 		<div class="col-md-10 col-md-offset-1">
 			<h1 class="text-center page-header"><%= post.tags %></h1>
-			<% if post.tags == "Sports" %>	
-			<% @users.each do |user| %>
-			<% if user.id == post.id %>
-			<h3><%= post.title %></h3>
-			<h3>Written by <%= user.first_name %> <%= user.last_name %></h3>
-			<% end %>
-			<% end %>
-			<p>Written on: <%= post.created_at.strftime("%B %d, %Y") %></p>
-			<p><%= post.content %></p>
-			<% end %>
-			<% if post.tags == "Dining" %>	
-			<h2><%= post.title %></h2>
-			<p>Written on: <%= post.created_at.strftime("%B %d, %Y") %></p>
-			<p><%= post.content %></p>
-			<% end %>
-			<% if post.tags == "Entertainment" %>	
-			<h2><%= post.title %></h2>
-			<p>Written on: <%= post.created_at.strftime("%B %d, %Y") %></p>
-			<p><%= post.content %></p>
-			<% end %>
-		<% end %>
-		<% end %>
+				<% @users.each do |user| %>
+					<% if user.id == post.user_id %>
+						<% if post.tags == "Sports" %>	
+							<h3><%= post.title %></h3>
+							<h3>Written by <%= user.first_name %> <%= user.last_name %></h3>
+							<p>Written <%= time_ago_in_words(post.created_at) %> ago</p>
+							<p><%= post.content %></p>
+						<% end %>
+						<% if post.tags == "Dining" %>	
+							<h3><%= post.title %></h3>
+							<h3>Written by <%= user.first_name %> <%= user.last_name %></h3>
+							<p>Written <%= time_ago_in_words(post.created_at) %> ago</p>
+							<p><%= post.content %></p>
+						<% end %>
+						<% if post.tags == "Entertainment" %>	
+							<h3><%= post.title %></h3>
+							<h3>Written by <%= user.first_name %> <%= user.last_name %></h3>
+							<p>Written <%= time_ago_in_words(post.created_at) %> ago</p>
+							<p><%= post.content %></p>
+						<% end %>
+					<% end %> <!-- close if user = post -->
+				<% end %> <!-- close @users each -->
+			<% end %> <!-- close if @posts = @city -->
+		<% end %> <!-- close @posts each -->
 		</div>		
 	</div>
 </div>
