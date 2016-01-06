@@ -4,6 +4,7 @@
 		<p>Written by: 
 			<a href="mailto:<%= @post.user.email %>?Subject=<%= @post.title %>"><%= @post.user.first_name %></a></p>
 			<p>Category: <%= @post.tags %></p>
+			<p>City: <a href="/cities/<%= @post.city.id %>"><%= @post.city.name %></a></p>
 			<p><%= image_tag @post.image.url(:medium) %></p>
 		<p><%= simple_format @post.content %></p>
 		<p>
