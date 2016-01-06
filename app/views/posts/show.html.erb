@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container col-md-6 col-md-offset-3">
 	<div class="row">
 		<h1><%= @post.title %></h1>
 		<p>Written by: 
-			<a href="<%= @post.user.email %>"><%= @post.user.first_name %></a></p>
+			<a href="mailto:<%= @post.user.email %>?Subject=<%= @post.title %>"><%= @post.user.first_name %></a></p>
 			<p>Category: <%= @post.tags %></p>
 			<p><%= image_tag @post.image.url(:medium) %></p>
 		<p><%= simple_format @post.content %></p>
