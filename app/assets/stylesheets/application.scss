@@ -6,14 +6,18 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:900);
 
 body { 
-background-color: #D5B77A;
+
 font-family: 'Lato', sans-serif;
+background-image: url("https://images.unsplash.com/20/sand.JPG?crop=entropy&fit=crop&fm=jpg&h=725&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1450");
+background-repeat: no-repeat;
+	background-size: cover;
 
 }
 
-h1 {
+h2 {
 	color: white;
 	font-size: 20px;
+	text-align: center;
 }
 
 .container {
@@ -25,15 +29,42 @@ h1 {
 }
 
 .input-group {
-	width: 50%;
+	width: 60%;
+	margin-left: 155px;
 }
 
+.field {
+margin-left: 160px;
+	
+}
+
+.navbar-custom .nav > li > a {
+	color: white;
+}
 
 .navbar {
-	opacity: 0.5;
-	font-size: 12px;
 	
+	font-size: 12px;
 	width: 100%;
+	opacity: 0.4;
 }
 
+.home {
+	padding-right: 728px;
+}
+
+
+
+
+.navbar-right {
+	margin-right: 20px;
+}
+
+.login {
+	padding-left: 400px;
+}
+
+.submit {
+	padding-left: 54px;
+}
 

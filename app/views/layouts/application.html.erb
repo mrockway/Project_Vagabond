@@ -6,11 +6,14 @@
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
-	<nav class="navbar navbar-inverse navbar-custom">
+	<nav class="navbar navbar-inverse">
  <!-- <div class="container-fluid”> -->
-		<div class="navBar">
+		<div class="navBar navbar-right navbar-custom">
 			<ul class="nav nav-pills">
-				<li role="presentation" class="active"><%= link_to "Home", root_path %></li>
+			
+				<li role="presentation" class="home"><%= link_to "Home", root_path %></li>
+
+				
 				<% if current_user %>
 				<li role="presentation"><%= link_to "Profile", user_path(current_user) %></li>
 				<li role="presentation"><%= link_to "Logout", logout_path %></li>
@@ -20,6 +23,8 @@
 				<% end %>
 			</ul>
 		</div>	
+		
+		
 		<!-- </div> -->
 		</nav>
 		<div class="container">

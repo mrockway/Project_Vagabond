@@ -1,17 +1,21 @@
-<div class="container">
-	
-<div class="row">
-	<div class="col-md-6 col-offset-3 ">
-		<h1>Login</h1>
-
-		<%= form_for :user, url:"/sessions",method: :post do |session| %>
-			<%= session.label :email %>
-			<%= session.email_field :email, autofocus: true %>
-			<%= session.label :password %>
-			<%= session.password_field :password %>
+<br>
+<h2>Login</h2>
+<form>
+	<div class="login">
+		<div class="input group">
+			<%= form_for :user, url:"/sessions",method: :post do |session| %>
+			<div class="input group">
+				<%= session.label :email %><br>
+				<%= session.email_field :email, autofocus: true %>
+			</div>
+			<div class="input group">
+				<%= session.label :password %><br>
+				<%= session.password_field :password %>
+			</div>
+			<br>
+			<div class="submit">
 			<%= session.submit "Submit" %>
-
-		<% end %>
-	</div>
-</div>
-</div>
+			</div>
+			<% end %>
+		</div>
+	</form>
