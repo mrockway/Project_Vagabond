@@ -1,17 +1,17 @@
 <div class="<%= @city.name.downcase.gsub(/\s+/, "-") %>-image">
 	<div class="row">
-		<div class="col-md-10 col-md-offset-1">
-			<h1 class="text-center"><%= @city.name %></h1>	
-			<p><%= @city.description %></p>
+		<div class="col-md-8 col-md-offset-2">
+			<div class="city-content">
+				<h1 class="text-center page-header"><%= @city.name %></h1>	
+				<h4><%= @city.description %></h4>	
+			</div>
 		</div>
 	</div>
-</div>
-<div class="content">
 	<div class="row">
 		<% @posts.each do |post| %>
 		<% if post.city_id == @city.id %>
-		<div class="col-md-10 col-md-offset-1">
-			<h1 class="text-center page-header"><%= post.tags %></h1>
+			<div class="col-md-10 col-md-offset-1">
+				<h1 class="text-center page-header"><%= post.tags %></h1>
 				<% @users.each do |user| %>
 					<% if user.id == post.user_id %>
 						<% if post.tags == "Sports" %>	
@@ -34,9 +34,9 @@
 						<% end %>
 					<% end %> <!-- close if user = post -->
 				<% end %> <!-- close @users each -->
-			<% end %> <!-- close if @posts = @city -->
+			</div>		
+		<% end %> <!-- close if @posts = @city -->
 		<% end %> <!-- close @posts each -->
-		</div>		
 	</div>
 </div>
 

@@ -2,6 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.city-content {
+	background-color: rgba(148, 148, 148, 0.75);
+	color: white;
+	margin: 10px;
+	padding: 0 15px 15px 15px;
+
+	h1 {
+		font-size: 60px;
+	}
+}
 
 .san-francisco-image {
 	background-image: url("san-francisco-pic.jpg");
