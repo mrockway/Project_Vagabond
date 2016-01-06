@@ -1,11 +1,9 @@
 <div class="container">
-<div class="row">
-	<div class="col-md-6 col-offset-3">
-<h1><%= @post.title %></h1>
-<p>Author: 
-<%= @post.author %></p>
-<p><%= @post.content %></p>
-</div>
-</div>
-	
+	<div class="row">
+		<h1><%= @post.title %></h1>
+		<p>Author: 
+			<%= @post.user.first_name %></p>
+		<p><%= image_tag @post.image.url(:medium) %>
+		<p><%= @post.content %></p>
+	</div>	
 </div>
