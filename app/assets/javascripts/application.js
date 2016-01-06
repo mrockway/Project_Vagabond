@@ -12,12 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-sprockets
 //= require_tree .
 
 $(function() {
 	
 	function resizeSplashImage() {
-		
 		var imageHeight = window.innerHeight;
 		$('.splash-page').css('height', imageHeight);
 	}

@@ -1,0 +1,25 @@
+<div class="col-md-4 col-md-offset-3">
+  <%= form_for @post, html: { multipart: true } do |f| %>
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, placeholder: "Post title", class: "form-control", autofocus: true %>
+    </div>
+    <div class="form-group">
+      <%= f.label :content %>
+      <%= f.text_area :content, placeholder: "Type your post here", class: "form-control" %>
+    </div>  
+      <p><%= f.label :city %></p>
+      <p><%= f.select :city_id, City.all.collect { |c| [c.name, c.id] } %></p>
+  <br>
+      <p><%= f.label :category %>
+     <p> <%= f.select :tags, [ "Dining", "Sports", "Entertainment"] %></p>
+  <br>
+    <div class="field">
+      <%= f.label :image %>
+      <%= f.file_field :image %>
+    </div>
+    <div class="form-group">
+      <%= f.submit "Save Post", class: "form-control" %>
+    </div>
+  <% end %>
+</div>

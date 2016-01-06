@@ -1,0 +1,13 @@
+<div class="content">
+	<div class="row">
+			<% City.all.collect do |city| %>
+				<div class="col-md-4">
+				<%= link_to city_path(city) do %>
+					<div class="<%= city.name.downcase.gsub(/\s+/, "-") %>-image city-thumbnail">
+						<h3><%= city.name %></h3>
+					</div>
+				<% end %>
+				</div>
+			<% end %>
+	</div>
+</div>

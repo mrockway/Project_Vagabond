@@ -1,17 +1,76 @@
-
+$border-radius-base: 0;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "welcome";
+@import "cities";
+@import url(https://fonts.googleapis.com/css?family=Lato:900);
 
 body { 
-	 
+
+font-family: 'Lato', sans-serif;
+background-image: url("https://images.unsplash.com/20/sand.JPG?crop=entropy&fit=crop&fm=jpg&h=725&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1450");
+background-repeat: no-repeat;
+	background-size: cover;
+	
+
 }
 
-.navBar {
-	background-color: rgba(119, 117, 117, 0.3);
+h2 {
+	color: white;
 	font-size: 20px;
-	/*position: fixed;*/
+	text-align: center;
+}
+
+.container {
+	margin-top: -20px;
+}
+
+.user {
+	color: #EEE9E9;
+}
+
+
+
+.navbar-custom .nav > li > a {
+	color: white;
+}
+
+.navbar {
+	
+	font-size: 12px;
+	width: 100%;
+	opacity: 0.4;
+}
+
+.home {
+	padding-right: 928px;
+}
+
+.container {
+	margin-top: -20px;
+}
+
+.user {
+	color: #EEE9E9;
+}
+
+.input-group {
+	width: 50%;
+}
+.navbar {
+	opacity: 0.5;
+	font-size: 12px;
 	width: 100%;
 }
+.navbar-right {
+	margin-right: 20px;
+}
 
+/*.login {		
+	padding-left: 525px;		
+}
 
+.submit {
+	padding-left: 54px;
+}
+*/
