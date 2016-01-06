@@ -16,7 +16,6 @@ class UsersController < ApplicationController
         flash[:notice] = "You have successfully created an account"
         session[:user_id] = @user.id
         redirect_to user_path(@user.id)
-      end
     else
       redirect_to new_user_path
       flash[:error] =  @user.errors.full_messages.join(", ")
