@@ -36,5 +36,47 @@
 		
 	}
 
+.btn-semi-transparent {
+    background: rgba(255,255,255,0.5);
+    border-style: none;
+    padding: 12px 22px;
+    font-size: 16px;
+}
 
+.demo1 {
+	border: 2px solid #000000;
+	height: 300px;
+	margin: 10px;
+	margin-left: 100px;
+	margin-right: 27px;
+}
 
+.demo2 {
+	border: 2px solid #000000;
+	height: 300px;
+	margin: 10px;
+}
+
+.demo3 {
+	border: 2px solid #000000;
+	height: 300px;
+	margin: 10px;
+	margin-left: 27px;
+}
+.demo-text-1 {
+	margin-right: 27px;
+	font-size: 20px;
+}
+
+.demo-text-2 {
+	font-size: 20px;
+}
+
+.demo-text-3 {
+	margin-left: 27px;
+	font-size: 20px;
+}
+
+.demo-info {
+	top-margin: 200px;	
+}

@@ -43,6 +43,10 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    current_user.destroy
+    session[:user_id] = nil
+    flash[:notice] = "Successfully deleted profile."
+    redirect_to "/login"
   end
 
   def show
