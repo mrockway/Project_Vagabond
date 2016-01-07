@@ -3,6 +3,7 @@ $border-radius-base: 0;
 @import "bootstrap";
 @import "welcome";
 @import "cities";
+@import "posts";
 @import url(https://fonts.googleapis.com/css?family=Lato:900);
 
 body { 
@@ -151,7 +152,7 @@ h4 {
     margin-top:9px;
 	padding-left: 100px;
 	padding-right: 100px;
-	margin-right: -33px;
+	margin-right: -34px;
 	margin-left: -23px;
 }
 
