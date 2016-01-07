@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
 
 	validates :current_city, presence: true
 
-	validates :email, presence: true	
+	validates :email, presence: true, uniqueness: true	
 
 	validates :password, presence: true, on: :create
 
