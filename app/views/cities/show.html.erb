@@ -26,7 +26,7 @@
 			<p>See post content related to: 
 				<span>
 					<% @posts.map(&:tags).uniq.each do |tag| %>
-						<%= link_to "#{tag}", city_path(@city), class: "post-tags" %>
+						<a href="#<%= tag %>" class="post-tags"><%= tag %></a>
 					<% end %>
 				</span>
 			</p>
@@ -40,7 +40,7 @@
 				<% @users.each do |user| %>
 					<% if user.id == post.user_id %>
 						<% if post.tags == "Sports" %>	
-							<a name="#{post.tags}"></a>
+							<a name="<%= post.tags %>"></a>
 							<h3><%= link_to "#{post.title}", post_path(post.id) %></h3>
 							<h3>Written by <%= user.first_name %> <%= user.last_name %></h3>
 							<p>Written <%= time_ago_in_words(post.created_at) %> ago</p>
