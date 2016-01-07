@@ -1,21 +1,8 @@
 <h2>Login</h2>
 <div class="container">
 	<div class="row">
-		<div class="col-md-4 col-md-offset-4">
-			<%= form_for :user, url:"/sessions",method: :post do |session| %>
-			<div class="form-group">
-				<%= session.label :email %><br>
-				<%= session.email_field :email, autofocus: true, class: "form-control" %>
-			</div>
-			<div class="form-group">
-				<%= session.label :password %><br>
-				<%= session.password_field :password, class: "form-control" %>
-			</div>
-			<br>
-			<div class="form-group">
-				<%= session.submit "Submit", class: "form-control" %>
-			</div>
-			<% end %>
+		<div class="col-md-4 col-centered">
+			<%= render "application/login" %>
 		</div>
 	</div>
 </div>
