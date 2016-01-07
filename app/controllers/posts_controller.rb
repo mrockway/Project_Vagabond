@@ -62,8 +62,7 @@ class PostsController < ApplicationController
 
   def get_user
     if current_user.nil?
-      flash[:error] = "Please sign in or login to continue"
-      redirect_to login_path
+      redirect_to root_path
     end
   end
 
