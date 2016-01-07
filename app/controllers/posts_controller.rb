@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   before_filter :set_post, except: [:index, :new, :create]
+  before_filter :get_user
+
 
   def new
     @post = Post.new(:user => @user)
@@ -12,8 +14,6 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.new(post_params)
-
-
     if @post.save
       redirect_to post_path(@post)
     else
@@ -59,6 +59,13 @@ class PostsController < ApplicationController
   end
 
   private
+
+  def get_user
+    if current_user.nil?
+      flash[:error] = "Please sign in or login to continue"
+      redirect_to login_path
+    end
+  end
 
   def set_post
     post_id = params[:id]

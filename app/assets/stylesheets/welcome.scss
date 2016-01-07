@@ -12,6 +12,7 @@
 	background-size: cover;
 	font-family: 'Lato', sans-serif;
 	margin-top: -50px;
+	padding-bottom: 70px;
 	
 	}
 
@@ -36,5 +37,63 @@
 		
 	}
 
+.btn-semi-transparent {
+    background: rgba(255,255,255,0.5);
+    border-style: none;
+    padding: 12px 22px;
+    font-size: 16px;
+}
 
+.demo1 {
+	border: 2px solid #000000;
+	height: 300px;
+	margin: 10px;
+	margin-left: 100px;
+	margin-right: 27px;
+	background-image: url("signup.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
+.demo2 {
+	border: 2px solid #000000;
+	height: 300px;
+	margin: 10px;
+	background-image: url("all-cities.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.demo3 {
+	border: 2px solid #000000;
+	height: 300px;
+	margin: 10px;
+	margin-left: 27px;
+	background-image: url("sydney-page.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.demo-text-1 {
+	margin-right: 27px;
+	font-size: 20px;
+	color: #FFFFFF;
+	padding-left: 0px;
+}
+
+.demo-text-2 {
+	font-size: 20px;
+	color: #FFFFFF;
+}
+
+.demo-text-3 {
+	margin-left: 27px;
+	font-size: 20px;
+	color: #FFFFFF;
+	padding-left: 34px;
+	padding-bottom: 30px;
+	padding-right: 0px;
+}
+
+.demo-info {
+	top-margin: 200px;
+}
