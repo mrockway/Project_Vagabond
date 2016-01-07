@@ -10,20 +10,20 @@
 			<!-- <div class="container-fluid”> -->
 			<div class="navBar">
 				<ul class="nav nav-pills">
-				<li role="presentation" class="home"><%= link_to "Vagabond", root_path %></li>
-				<% if current_user %>
-				<li class="pull-right" role="presentation"><%= link_to "Profile", user_path(current_user) %></li>
-				<li class="pull-right" role="presentation"><%= link_to "Logout", logout_path %></li>
-				<% else %>
-				<li class="pull-right" role="presentation"><%= link_to "Sign Up", new_user_path %></li>
-				<li class="pull-right" role="presentation"><%= link_to "Login", login_path %></li>
-				<% end %>
-			</ul>
-		</div>	
-		
-		
-		<!-- </div> -->
-
+					<li role="presentation" class="home"><%= link_to "Vagabond", root_path %></li>
+					<% if current_user %>
+					<li class="pull-right home2" role="presentation"><%= link_to "Profile", user_path(current_user) %></li>
+					<li class="pull-right home2" role="presentation"><%= link_to "Logout", logout_path %></li>
+					
+					<% else %>
+					<li class="pull-right home2" role="presentation"><%= link_to "Sign Up", new_user_path %></li>
+					<li class="pull-right home2" role="presentation"><%= link_to "Login", login_path %></li>
+					<% end %>
+				</ul>
+			</div>
+			
+			
+			<!-- </div> -->
 		</nav>
 		<div class="container">
 			<div class="row">
@@ -36,10 +36,9 @@
 			
 		</div>
 		
-			
-			<%= yield %>
-
-			
+		
+		<%= yield %>
+		
 		
 		<%= javascript_include_tag 'application' %>
 	</body>

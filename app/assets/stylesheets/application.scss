@@ -8,11 +8,10 @@ $border-radius-base: 0;
 body { 
 
 font-family: 'Lato', sans-serif;
-background-image: url("https://images.unsplash.com/20/sand.JPG?crop=entropy&fit=crop&fm=jpg&h=725&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1450");
+background-image: url("https://images.unsplash.com/photo-1431629087622-72b063a59b19?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=554c5e75192cbbc32c807027e21deb23");
 background-repeat: no-repeat;
 	background-size: cover;
 	
-
 }
 
 h2 {
@@ -29,8 +28,6 @@ h2 {
 	color: #EEE9E9;
 }
 
-
-
 .navbar-custom .nav > li > a {
 	color: white;
 }
@@ -43,7 +40,18 @@ h2 {
 }
 
 .home {
-	padding-right: 928px;
+	border: solid 4px white;
+	font-size: 16px;
+	font-color: white;
+	margin-left: 1px;
+
+}
+
+.home2 {
+	
+	font-size: 16px;
+	font-color: white;
+	margin-left: 1px;
 }
 
 .container {
@@ -66,11 +74,66 @@ h2 {
 	margin-right: 20px;
 }
 
-/*.login {		
-	padding-left: 525px;		
+p2 {
+	color: white;
 }
 
-.submit {
-	padding-left: 54px;
+.nav > p {
+	color: white;
 }
-*/
+
+h4 {
+	color: white;
+}
+
+.options ul {
+	list-style: none;
+
+}
+
+.options li {
+	display: inline;
+	padding: 35px;
+	color: white;
+
+}
+
+.posts {
+ 	
+ 	padding-left: 400px;
+
+}
+
+ .post {
+ 
+ background-color: blue;
+ 
+ }
+ 
+ #post a {
+ 
+ color: white;
+ font-size: 18px;
+
+ }
+
+ #list {
+ 
+ background:black;
+ opacity: 0.5;
+ margin-left: 340px;
+ border-radius: 7px;
+
+ }
+
+ .home a {
+  color: white;
+ }
+
+ .home2 a {
+ color: white;
+ }
+
+
+
+ 
