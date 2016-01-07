@@ -98,14 +98,6 @@ h4 {
 
 }
 
-
-
- .post {
- 
- background-color: blue;
- 
- }
- 
  #post a {
  
  color: white;
@@ -130,6 +122,38 @@ h4 {
  color: white;
  }
 
+.travel {
+	font-size: 33px;
+	color: #54442F;
+}
+
+.title a {
+	color: #54442F;
+	font-size: 20px;
+}
+
+.content a {
+	color: white;
+}
+
+.post {
+    margin-top: 100px;
+	border-radius: 7px;
+	padding: 0px 20px 20px 20px;
+	
+}
+
+.post-content {
+	color: white;
+}
+
+.posts {
+    margin-top:9px;
+	padding-left: 100px;
+	padding-right: 100px;
+	margin-right: -33px;
+	margin-left: -23px;
+}
 
 
  
