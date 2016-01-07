@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
 
 	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
-	validates :title, presence: true
+	validates :title, presence: true, length: { minimum: 1, maximum: 100}
 
 	# validates :author, presence: true
 
