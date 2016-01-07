@@ -7,8 +7,10 @@
 		<hr>
 		<div class="col-md-4 col-offset-3">
 			<p><%= image_tag current_user.image.url(:thumb) %></p>
-		</div>
+			<h4>Current city: <%= current_user.current_city %> <br><br>
 
+			Member since <%= current_user.created_at.strftime("%B %d, %Y") %></h4>
+		</div>
 		<div class="options">
 			
 			<ul>
@@ -20,17 +22,20 @@
 				</div>
 			</ul>
 		</div>
-
-		
-		<div class="posts">
-			<h4><%= current_user.first_name %>'s posts</h4>
-			<% current_user.posts.each do |post| %>
-			<p><%= link_to post.title, post_path(post) %> - <%= post.content %></p>
+		<div class="container">
+			<div class="col-md-8">
+				<div class="posts">
+					<br>
+					<br>
+					<% current_user.posts.each do |post| %>
+					<p><%= link_to post.title, post_path(post) %> - <%= post.content %></p>
+					<% end %>
+				</div>
+			</div>
 		</div>
-		<% end %>
+		
 		
 	</div>
-
 </div>
-<h4>Current city: <%= current_user.current_city %> <br>
-		Member since <%= current_user.created_at.strftime("%B %d, %Y") %></h4>
+<!-- <h4>Current city: <%= current_user.current_city %> <br>
+Member since <%= current_user.created_at.strftime("%B %d, %Y") %></h4> -->

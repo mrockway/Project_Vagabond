@@ -8,17 +8,17 @@
   <%= f.text_area :content, placeholder: "Type your post here", class: "form-control" %>
 </div>
 <p><%= f.label :city %>
-<%= f.select :city_id, City.all.collect { |c| [c.name, c.id] } %>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<%= f.label :category %>
-  <%= f.select :tags, [ "Dining", "Sports", "Entertainment"] %></p>
-  <br>
-  <div class="field">
-    <%= f.label :image %>
-    <%= f.file_field :image %>
-  </div>
-  <br>
-  <div class="form-group">
-    <%= f.submit "Save Post", class: "form-control" %>
-  </div>
-  <% end %>
+  <%= f.select :city_id, City.all.collect { |c| [c.name, c.id] } %>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <%= f.label :category %>
+<%= f.select :tags, [ "Dining", "Sports", "Entertainment"] %></p>
+<br>
+<div class="field">
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+</div>
+<br>
+<div class="form-group">
+  <%= f.submit "Save Post", class: "form-control" %>
+</div>
+<% end %>
