@@ -47,15 +47,15 @@
 							<p><%= post.content %></p>
 						<% end %>
 						<% if post.tags == "Dining" %>
-							<a name="#{post.tags}"></a>	
-							<h3><%= post.title %></h3>
+							<a name="<%= post.tags %>"></a>
+							<h3><%= link_to "#{post.title}", post_path(post.id) %></h3>
 							<h3>Written by <%= user.first_name %> <%= user.last_name %></h3>
 							<p>Written <%= time_ago_in_words(post.created_at) %> ago</p>
 							<p><%= post.content %></p>
 						<% end %>
 						<% if post.tags == "Entertainment" %>	
-							<a name="#{post.tags}"></a>
-							<h3><%= post.title %></h3>
+							<a name="<%= post.tags %>"></a>
+							<h3><%= link_to "#{post.title}", post_path(post.id) %></h3>
 							<h3>Written by <%= user.first_name %> <%= user.last_name %></h3>
 							<p>Written <%= time_ago_in_words(post.created_at) %> ago</p>
 							<p><%= post.content %></p>
