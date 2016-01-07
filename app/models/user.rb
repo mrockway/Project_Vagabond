@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 	
-	has_attached_file :image, :styles => { large: "600x600", medium: "200x280", thumb: "150x150" },
+	has_attached_file :image, :styles => { large: "600x600", medium: "200x280", thumb: "260x300" },
 	:default_url => "thumb/missing.png"
 	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
 
 	validates :email, presence: true	
 
-	validates :password, presence: true
+	validates :password, presence: true, on: :create
 
 	# validates :password_confirmation, presence: true
 
