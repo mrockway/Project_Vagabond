@@ -1,27 +1,27 @@
 <%= form_for @user, html: { multipart: true } do |user| %>
 	<div class="form-group">
 		<%= user.label :email %>
-		<%= user.email_field :email, class: "form-control", autofocus: true %>
+		<%= user.email_field :email, placeholder: "email@example.com", class: "form-control", autofocus: true %>
 	</div>
 	<div class="form-group">
 		<%= user.label :first_name %>
-		<%= user.text_field :first_name, class: "form-control" %>
+		<%= user.text_field :first_name, placeholder: "First name", class: "form-control" %>
 	</div>
 	<div class="form-group">
 		<%= user.label :last_name %>
-		<%= user.text_field :last_name, class: "form-control" %>
+		<%= user.text_field :last_name, placeholder: "Last name", class: "form-control" %>
 	</div>
 	<div class="form-group">
 		<%= user.label :current_city %>
-		<%= user.text_field :current_city, class: "form-control" %>
+		<%= user.text_field :current_city, placeholder: "Current city", class: "form-control" %>
 	</div>
 	<div class="form-group">
 		<%= user.label :password %>
-		<%= user.password_field :password, class: "form-control" %>
+		<%= user.password_field :password, placeholder: "Password", class: "form-control" %>
 	</div>
 	<div class="form-group">
 		<%= user.label :password_confirmation %>
-		<%= user.password_field :password_confirmation, class: "form-control" %>
+		<%= user.password_field :password_confirmation, placeholder: "Re-enter password", class: "form-control" %>
 	</div>
 	<div class="field">
 		<%= user.label :image %>
