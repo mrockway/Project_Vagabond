@@ -15,8 +15,8 @@
 					<li class="pull-right home2" role="presentation"><%= link_to "Profile", user_path(current_user) %></li>
 					
 					<% else %>
-					<li class="pull-right home2" role="presentation"><%= link_to "Login", login_path %></li>
-					<li class="pull-right home2" role="presentation"><%= link_to "Sign Up", new_user_path %></li>
+					<li class="pull-right home2" role="presentation"><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
+					<li class="pull-right home2" role="presentation"><a href="#" data-toggle="modal" data-target="#signUpModal">Sign Up</a></li>
 					<% end %>
 				</ul>
 			</div>
@@ -34,8 +34,38 @@
 		
 		
 		<%= yield %>
+		<% if not current_user %>
+			<!-- Modal -->
+		<div class="modal fade bs-example-modal-sm" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel">
+		  <div class="modal-dialog modal-sm" role="document">
+		    <div class="modal-content">
+		    <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="loginModalLabel">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+		        <%= render "application/signup" %>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 		
-		
+				<!-- Modal -->
+		<div class="modal fade bs-example-modal-sm" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
+		  <div class="modal-dialog modal-sm" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="loginModalLabel">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+		        <%= render "application/login" %>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<% end %>
+
 		<%= javascript_include_tag 'application' %>
 	</body>
 </html>

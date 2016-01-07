@@ -21,8 +21,7 @@ class CitiesController < ApplicationController
   
   def set_user
     if current_user.nil?
-      redirect_to login_path
-      flash[:notice] = "Please sign up or login to continue"
+      redirect_to root_path
     end
   end
 
