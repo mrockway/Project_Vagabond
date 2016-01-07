@@ -1,13 +1,18 @@
 <div class="content">
-	<div class="row">
-			<% City.all.collect do |city| %>
-				<div class="col-md-4">
-				<%= link_to city_path(city) do %>
-					<div class="<%= city.name.downcase.gsub(/\s+/, "-") %>-image city-thumbnail">
-						<h3><%= city.name %></h3>
+	<div class="cities-grid">
+	<h1 class="text-center cities-index-headline">Choose a city below to look at reviews.</h1>
+		<% (City.all).in_groups_of(3).each do |group| %>
+			<div class="row">
+				<% group.each do |city| %>
+					<div class="col-md-4">
+					<%= link_to city_path(city) do %>
+						<div class="<%= city.name.downcase.gsub(/\s+/, "-") %>-image city-thumbnail">
+							<h3 class="city-thumb-name"><%= city.name %></h3>
+						</div>
+					<% end %>
 					</div>
 				<% end %>
-				</div>
-			<% end %>
+			</div>
+		<% end %>
 	</div>
 </div>
