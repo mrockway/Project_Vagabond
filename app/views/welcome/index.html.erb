@@ -2,7 +2,7 @@
 	<div class="row">
 		<div id="title">
 			<h1 class="text-center">Vagabond</h1>
-			<h3 class="text-center">A travel community for users to share city-specific tips about their favorite locations around the world
+			<h3 class="text-center">A travel community for sharing city-specific tips about your favorite locations around the world
 			<br>
 			<br>
 			<p><a href="#anchor" class="text-center btn hide-sm btn-contrast btn-large btn-semi-transparent">
@@ -13,35 +13,67 @@
 	<div class="demo-info">
 	<a name="anchor"></a>
 	<div class="col-md-6 col-md-offset-3">
-	<h2><a href="#" data-toggle="modal" data-target="#signUpModal">Sign Up</a> to join the Vagabond travel community</h2>
+	<h2 class="signup-text"><a href="#signup-text">Sign Up</a> to join the Vagabond travel community</h2>
 	</div>
 	<div class="row">
-		<div class="demo1 col-md-3">
-		
-		</div>
-		<div class="demo2 col-md-3">
+ 	<div class="col-md-8 col-md-offset-2">
+ 		<div class="row">
+ 			<div class="col-md-4">
+ 				<img src="signup.jpg" class="img-responsive img-circle center-block round-image">
+ 				<div class="homepage-text"><p>Step 1:</p> 
+				Create an account and log in, to be able to create and view travel posts.</div>
+ 			</div>
+ 			<div class="col-md-4">
+ 					<%= image_tag "all-cities.jpg", class: "img-responsive img-circle center-block round-image" %>
+ 					<div class="homepage-text"><p>Step 2:</p> 
+					Explore new cities. Click on a picture to learn more about the city.</div>
+ 			</div>
+ 			<div class="col-md-4">
+ 				<%= image_tag "sydney-page.jpg", class: "img-responsive img-circle center-block round-image" %>
+ 				<div class="homepage-text"><p>Step 3:</p> 
+				View posts about the city, separated by category. Add a post about your experience.</div>
+			</div>
 
 		</div>
-		<div class="demo3 col-md-3">
-		
-		</div>
+		<br>
+		<div class="col-md-6 col-md-offset-3">
+		<% if @user %>
+			<%= form_for @user, html: { multipart: true } do |user| %>
+				<div class="form-group">
+				<%= user.label :email %>
+				<%= user.email_field :email, placeholder: "email@example.com", class: "form-control", autofocus: true %>
+			</div>
+			<div class="form-group">
+				<%= user.label :first_name %>
+				<%= user.text_field :first_name, placeholder: "First name", class: "form-control" %>
+			</div>
+			<div class="form-group">
+				<%= user.label :last_name %>
+				<%= user.text_field :last_name, placeholder: "Last name", class: "form-control" %>
+			</div>
+			<div class="form-group">
+				<%= user.label :current_city %>
+				<%= user.text_field :current_city, placeholder: "Current city", class: "form-control" %>
+			</div>
+			<div class="form-group">
+				<%= user.label :password %>
+				<%= user.password_field :password, placeholder: "Password", class: "form-control" %>
+			</div>
+			<div class="form-group">
+				<%= user.label :password_confirmation %>
+				<%= user.password_field :password_confirmation, placeholder: "Re-enter password", class: "form-control" %>
+			</div>
+			<div class="field">
+				<%= user.label :image %>
+				<%= user.file_field :image %>
+			</div>
+			<div class="form-group">
+				<br>
+				<%= user.submit "Submit", class: "form-control" %>
+			</div>
+			<% end %>
+		<% end %>
+	</div>	
+			<a name="signup-text"></a>
 	</div>
-		<div class="demo-text-1 col-md-3 col-md-offset-1">
-		<p>Step 1:</p> 
-		Create an account and log in, to be able to create and view travel posts.
-		
-		</div>
-		
-		<div class="demo-text-2 col-md-3">
-		<p>Step 2:</p> 
-		Explore new cities. Click on a picture to learn more about the city.
-
-		</div>
-		
-		<div class="demo-text-3 col-md-3">
-		<p>Step 3:</p> 
-		View posts about the city, separated by category. Add a post about your experience.
-
-		</div>
-		</div>
 </div>

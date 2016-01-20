@@ -3,7 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-	background-image: url("https://images.unsplash.com/photo-1415750465391-51ed29b1e610?crop=entropy&fit=crop&fm=jpg&h=725&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1450");
+	font-family: 'Lato', sans-serif;
+	/*background-image: url("https://images.unsplash.com/photo-1415750465391-51ed29b1e610?crop=entropy&fit=crop&fm=jpg&h=725&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1450");
+	*/
+	/*background-image: url("https://images.unsplash.com/photo-1431629087622-72b063a59b19?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=554c5e75192cbbc32c807027e21deb23");
+	*/background-repeat: no-repeat;
+	background-size: cover;
 }
 
 p {
